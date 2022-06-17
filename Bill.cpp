@@ -16,15 +16,16 @@ void enterBill(Bill& purchase)
 
 	cout << "Name: ";
 	cin.ignore();
-	gets_s(purchase.nameCustomer);
+	gets(purchase.nameCustomer);
+	fflush(stdin);
 
 	cout << "Address: ";
-	cin.ignore();
-	gets_s(purchase.address);
+	gets(purchase.address);
+	fflush(stdin);
 
 	cout << "Payment method: ";
-	cin.ignore();
-	gets_s(purchase.paymentMethod);
+	gets(purchase.paymentMethod);
+	fflush(stdin);
 }
 
 void showBill(Bill &purchase)

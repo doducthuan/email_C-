@@ -34,8 +34,8 @@ void main()
 			case 1:
 				char name[50];
 				cout << "Please enter name of product: ";
-				cin.ignore();
 				gets(name);
+				fflush(stdin);
 
 				cout << "Result of your finding: \n";
 				Product result = find(listInput, name);
@@ -47,9 +47,8 @@ void main()
 			case 2:
 				char type[20];
 				cout << "Please enter type of product: ";
-				cin.ignore();
 				gets(type);
-
+				fflush(stdin);
 				cout << "Results of your finding: \n";
 				showList(filterType(listInput, type));
 				break;
@@ -99,7 +98,6 @@ void main()
 			int answer1;
 			cout << "Do you want to adjust this list? (1. Yes/2. No)\n";
 			cout << "Your choice: ";
-			cin.ignore();
 			cin >> answer1;
 
 			if (answer1 == 1) {
